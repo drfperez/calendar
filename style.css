@@ -1,3 +1,48 @@
+
+
+/* Other styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+label {
+  margin: 0 10px;
+}
+
+select {
+  padding: 10px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
 #events {
   font-size: 20px;
   font-family: Arial, sans-serif;
@@ -8,3 +53,10 @@
   height: 300px;
   margin-top: 30px;
 }
+
+
+li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
