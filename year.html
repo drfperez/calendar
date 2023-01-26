@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #text-output, #image-output {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="year-input">Select a year:</label>
+      <input type="text" id="year-input" placeholder="Enter a year (0-2023)">
+      <button id="year-submit">Submit</button>
+    </div>
+    <div id="text-output"></div>
+    <div id="image-output"></div>
+
+    <script>
+      const yearInput = document.getElementById("year-input");
+      const yearSubmit = document.getElementById("year-submit");
+      const textOutput = document.getElementById("text-output");
+      const imageOutput = document.getElementById("image-output");
+
+      yearSubmit.addEventListener("click", function() {
+        const inputYear = yearInput.value;
+        if (!/^\d+$/.test(inputYear) || inputYear < 0 || inputYear > 2023) {
+          textOutput.innerHTML = "Invalid input. Please enter a year between 0 and 2023.";
+          textOutput.style.display = "block";
+          imageOutput.style.display = "none";
+        } else {
+          textOutput.innerHTML = `<h1>Year ${inputYear}</h1>
+<p>You have selected the year ${inputYear}. </p>
+<p> This year is known for...</p>
+<h2>Important events in ${inputYear}</h2>
+<ul>
+<li>Event 1</li>
+<li>Event 2</li>
+</ul>`;
+textOutput.style.display = "block";
+
+          imageOutput.innerHTML = `<img src="${inputYear}.jpg" alt="${inputYear}">`;
+          imageOutput.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>
+
